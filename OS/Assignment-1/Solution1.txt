@@ -1,0 +1,184 @@
+Navigate and List:
+-----------------------
+nidhi@hp:/$ pwd
+/
+nidhi@hp:/$ ls
+bin   dev  home  lib    lib64   lost+found  mnt  proc  run   snap  sys  usr
+boot  etc  init  lib32  libx32  media       opt  root  sbin  srv   tmp  var
+nidhi@hp:/$ cd home/
+nidhi@hp:/home$ ls
+LinuxAssignment  nidhi
+nidhi@hp:/home$ cd LinuxAssignment/
+nidhi@hp:/home/LinuxAssignment$ ls
+
+File Management:
+-----------------
+nidhi@hp:/home/LinuxAssignment$ touch file1.txt
+touch: cannot touch 'file1.txt': Permission denied
+nidhi@hp:/home/LinuxAssignment$ sudo touch file1.txt
+nidhi@hp:/home/LinuxAssignment$ echo "This is file1"|sudo tee /home/LinuxAssignment/file1.txt
+This is file1
+nidhi@hp:/home/LinuxAssignment$ cat file1.txt
+This is file1
+
+Directory Management:
+-----------------------
+nidhi@hp:/home/LinuxAssignment$ sudo mkdir docs
+
+Copy and Move Files:
+----------------------
+nidhi@hp:/home/LinuxAssignment$ sudo cp file1.txt docs/file2.txt
+
+Permissions and Ownership:
+----------------------------
+nidhi@hp:/home/LinuxAssignment/docs$ ls -l
+total 4
+-rw-r--r-- 1 root root 14 Mar  7 19:42 file2.txt
+nidhi@hp:/home/LinuxAssignment/docs$ sudo chmod u+rwx,g+r,o+r file2.txt
+nidhi@hp:/home/LinuxAssignment/docs$ ls -l
+total 4
+-rwxr--r-- 1 root root 14 Mar  7 19:42 file2.txt
+nidhi@hp:/home/LinuxAssignment/docs$ sudo chown nidhi file2.txt
+nidhi@hp:/home/LinuxAssignment/docs$ ls -l
+total 4
+-rwxr--r-- 1 nidhi root 14 Mar  7 19:42 file2.txt
+
+Final Checklist:
+----------------------
+nidhi@hp:/home$ tree
+.
+├── LinuxAssignment
+│   ├── docs
+│   │   └── file2.txt
+│   └── file1.txt
+└── nidhi
+    ├── day2
+    │   ├── dir1
+    │   │   ├── 1
+    │   │   ├── 2
+    │   │   ├── 3
+    │   │   └── f4
+    │   ├── dir2
+    │   │   ├── 1
+    │   │   ├── 2
+    │   │   └── 3
+    │   ├── f1
+    │   ├── f2
+    │   ├── f5
+    │   ├── file.sh
+    │   ├── file.txt
+    │   ├── file1.sh
+    │   ├── link -> file.txt
+    │   ├── names.txt
+    │   └── test.sh
+    ├── kuru
+    │   ├── parashara
+    │   │   └── vyasa
+    │   └── shantanu
+    │       ├── bhisma
+    │       ├── chitangada
+    │       └── vichitravirya
+    │           ├── dhiritarastra
+    │           │   ├── 99other
+    │           │   └── duryodhana
+    │           └── pandu
+    │               ├── arjuna
+    │               │   └── abhimanyu
+    │               │       └── parikshita
+    │               │           └── janamejaya
+    │               ├── bhima
+    │               ├── nakula
+    │               ├── sahadeva
+    │               └── yudhishthira
+    ├── user1
+    │   ├── music
+    │   └── photo
+    └── user2
+        ├── docs
+        └── video
+
+37 directories, 12 files
+
+File Searching:
+-----------------
+nidhi@hp:/home$ find -name "*.txt"
+./LinuxAssignment/docs/file2.txt
+./LinuxAssignment/file1.txt
+./nidhi/day2/file.txt
+./nidhi/day2/names.txt
+nidhi@hp:/home/LinuxAssignment$ grep "file" file1.txt
+This is file1
+
+System Information:
+--------------------
+nidhi@hp:/home/LinuxAssignment$ date
+Thu Mar  7 19:58:19 IST 2024
+
+Networking:
+-------------
+nidhi@hp:/home/LinuxAssignment$ hostname -I
+172.31.105.19
+nidhi@hp:/home/LinuxAssignment$ ping www.google.com
+PING www.google.com (142.251.42.68) 56(84) bytes of data.
+64 bytes from bom12s21-in-f4.1e100.net (142.251.42.68): icmp_seq=1 ttl=111 time=33.8 ms
+64 bytes from bom12s21-in-f4.1e100.net (142.251.42.68): icmp_seq=2 ttl=111 time=37.7 ms
+64 bytes from bom12s21-in-f4.1e100.net (142.251.42.68): icmp_seq=3 ttl=111 time=36.9 ms
+64 bytes from bom12s21-in-f4.1e100.net (142.251.42.68): icmp_seq=4 ttl=111 time=37.2 ms
+^C
+--- www.google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 33.824/36.394/37.672/1.510 ms
+
+File Compression:
+------------------
+nidhi@hp:/home/LinuxAssignment$ ls
+docs  file1.txt
+nidhi@hp:/home/LinuxAssignment$ zip archive.zip docs
+zip I/O error: Permission denied
+zip error: Could not create output file (archive.zip)
+nidhi@hp:/home/LinuxAssignment$ sudo zip archive.zip docs
+  adding: docs/ (stored 0%)
+nidhi@hp:/home/LinuxAssignment$ ls
+archive.zip  docs  file1.txt
+nidhi@hp:/home/LinuxAssignment$ sudo mkdir newdir
+nidhi@hp:/home/LinuxAssignment$ ls
+archive.zip  docs  file1.txt  newdir
+nidhi@hp:/home/LinuxAssignment$ sudo unzip archive.zip -d newdir
+Archive:  archive.zip
+   creating: newdir/docs/
+nidhi@hp:/home/LinuxAssignment$ ls
+archive.zip  docs  file1.txt  newdir
+nidhi@hp:/home/LinuxAssignment$ cd newdir/
+nidhi@hp:/home/LinuxAssignment/newdir$ ls
+docs
+
+File Editing:
+---------------
+nidhi@hp:/home/LinuxAssignment$ vi file1.txt
+nidhi@hp:/home/LinuxAssignment$ cat file1.txt
+This is file1
+
+this is new file added in editor
+nidhi@hp:/home/LinuxAssignment$ sed -i 's/editor/texteditor/' file1.txt
+sed: couldn't open temporary file ./sed7uy4JA: Permission denied
+nidhi@hp:/home/LinuxAssignment$ sudo sed -i 's/editor/texteditor/' file1.txt
+nidhi@hp:/home/LinuxAssignment$ cat file1.txt
+This is file1
+
+this is new file added in texteditor
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
