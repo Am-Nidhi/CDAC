@@ -1,0 +1,17 @@
+nidhi@hp:~/assignment2$ cat que7.sh
+#!/bin/bash
+n=1
+while [[ $n -le 5 ]]
+do
+        echo $n
+        ((n++))
+done
+------------------
+----------------------------------------
+nidhi@hp:~/assignment2$ vi que7.sh
+nidhi@hp:~/assignment2$ ./que7.sh
+1
+2
+3
+4
+5

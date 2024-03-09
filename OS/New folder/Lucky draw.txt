@@ -1,0 +1,29 @@
+Lucky draw
+===========================================
+
+nidhi@hp:~/day4$ cat quiz.sh
+#!/bin/bash
+
+echo "Enter your marks"
+read marks
+
+if [[ marks -lt 100 && marks -ge 45 ]]
+then
+        echo "Winner"
+else
+        echo "Loser"
+fi
+
+Output
+----------------------
+nidhi@hp:~/day4$ ./quiz.sh
+Enter your marks
+40
+Loser
+nidhi@hp:~/day4$ ./quiz.sh
+Enter your marks
+85
+Winner
+
+
+

@@ -1,0 +1,12 @@
+nidhi@hp:~/assignment2$ cat que3.sh
+#!/bin/bash
+echo "Enter number"
+read n
+echo $n
+--------------------------------------------
+nidhi@hp:~/assignment2$ vi que3.sh
+nidhi@hp:~/assignment2$ chmod +x que3.sh
+nidhi@hp:~/assignment2$ ./que3.sh
+Enter number
+5
+5

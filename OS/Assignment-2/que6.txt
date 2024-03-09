@@ -1,0 +1,16 @@
+nidhi@hp:~/assignment2$ cat que6.sh
+#!/bin/bash
+
+for (( i=1; i<=5; i++))
+do
+        echo $i
+done
+---------------------
+nidhi@hp:~/assignment2$ vi que6.sh
+nidhi@hp:~/assignment2$ chmod +x que6.sh
+nidhi@hp:~/assignment2$ ./que6.sh
+1
+2
+3
+4
+5

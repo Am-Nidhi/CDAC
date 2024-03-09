@@ -1,0 +1,9 @@
+nidhi@hp:~/assignment2$ cat que2.sh
+#!/bin/bash
+name="CDAC Mumbai"
+echo $name
+--------------------------------------------
+nidhi@hp:~/assignment2$ vi que2.sh
+nidhi@hp:~/assignment2$ chmod +x que2.sh
+nidhi@hp:~/assignment2$ ./que2.sh
+CDAC Mumbai

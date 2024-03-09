@@ -1,0 +1,23 @@
+nidhi@hp:~/assignment2$ cat que4.sh
+
+#!/bin/bash
+echo "Enter 2 number"
+read a
+read b
+
+sum=$((a+b))
+
+echo $sum
+-------------------------------------------------
+nidhi@hp:~/assignment2$ vi que4.sh
+nidhi@hp:~/assignment2$ chmod +x que4.sh
+nidhi@hp:~/assignment2$ ./que4.sh
+Enter 2 number
+5
+7
+12
+nidhi@hp:~/assignment2$ ./que4.sh
+Enter 2 number
+1
+2
+3

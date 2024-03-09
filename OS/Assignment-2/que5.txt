@@ -1,0 +1,21 @@
+nidhi@hp:~/assignment2$ cat que5.sh
+#!/bin/bash
+echo "Enter number"
+read n
+
+if [[ $n%2 -eq 0 ]]
+then
+        echo "Even"
+else
+        echo "Odd"
+fi
+----------------------------------------
+nidhi@hp:~/assignment2$ vi que5.sh
+nidhi@hp:~/assignment2$ ./que5.sh
+Enter number
+1
+Odd
+nidhi@hp:~/assignment2$ ./que5.sh
+Enter number
+4
+Even

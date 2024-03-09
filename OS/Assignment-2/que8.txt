@@ -1,0 +1,16 @@
+nidhi@hp:~/assignment2$ cat que8.sh
+#!/bin/bash
+
+if [ -f "file.txt" ];
+then
+        echo "File exists"
+else
+        echo "File does not exist"
+fi
+
+------------------------------------------
+nidhi@hp:~/assignment2$ ./que8.sh
+File does not exist
+nidhi@hp:~/assignment2$ touch file.txt
+nidhi@hp:~/assignment2$ ./que8.sh
+File exists

@@ -1,0 +1,26 @@
+nidhi@hp:~/assignment2$ cat que9.sh
+#!/bin/bash
+echo "Enter number"
+read n
+
+if [[ $n -gt 10 ]]
+then
+        echo "greater than 10"
+else
+        echo "less or equal to 10"
+fi
+------------------------------------------------
+nidhi@hp:~/assignment2$ vi que9.sh
+nidhi@hp:~/assignment2$ chmod +x que9.sh
+nidhi@hp:~/assignment2$ ./que9.sh
+Enter number
+5
+less or equal to 10
+nidhi@hp:~/assignment2$ ./que9.sh
+Enter number
+10
+less or equal to 10
+nidhi@hp:~/assignment2$ ./que9.sh
+Enter number
+98
+greater than 10

@@ -1,0 +1,29 @@
+nidhi@hp:~/assignment2$ cat que11.sh
+#!/bin/bash
+while true;
+do
+        echo "enter num"
+        read n
+        if [ $n -lt 0 ]
+        then
+                break;
+        else
+                square=$((n*n))
+                echo $square
+        fi
+done
+-------------------------------------------------
+nidhi@hp:~/assignment2$ vi que11.sh
+nidhi@hp:~/assignment2$ chmod +x que11.sh
+nidhi@hp:~/assignment2$ ./que11.sh
+enter num
+4
+16
+enter num
+6
+36
+enter num
+2
+4
+enter num
+-9
